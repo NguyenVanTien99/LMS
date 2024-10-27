@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học tốt cùng Odu</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: #eefdd8;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 120px;
+            padding: 0 20px; 
+            background: #c7d9a0;
+        }
+        /* Container chứa menu */
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Mỗi bảng (card) */
+        .menu-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hiệu ứng hover khi di chuột qua mỗi bảng */
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Định dạng tiêu đề bảng */
+        .menu-item h3 {
+            color: #f48942;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        /* Định dạng nội dung trong bảng */
+        .menu-item p {
+            color: #666;
+            font-size: 1em;
+        }
+        .menu-item a {
+        text-decoration: none;
+        color: inherit; /* Giữ nguyên màu chữ của phần tử cha */
+        }
+        /* Menu */
+        .navbar {
+            display: flex; 
+            background-color: #73bc63;
+            width: 100%; 
+        }
+
+        .navbar a {
+            flex: 1; 
+            font-size: 18px;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: rgb(86, 160, 46); 
+        }
+
+        /* Bố cục chính với sidebar và nội dung */
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Sidebar chứa danh sách bài học */
+        .sidebar {
+            width: 250px;
+            background-color: #ceecc3;
+            padding: 15px;
+            border-right: 2px solid #ddd;
+        }
+
+        .sidebar h3 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+            font-size: 25px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Nội dung chính với các trang hình ảnh */
+        .content {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .page {
+            margin: 20px 0;
+        }
+
+        .page img {
+            width: 210mm; /* Kích thước chuẩn A4 */
+            height: 297mm; /* Kích thước chuẩn A4 */
+            object-fit: contain;
+            background-color: white;
+        }
+
+        @media print {
+        body {
+            background-color: white;
+        }
+
+        .page {
+            margin: 0;
+            box-shadow: none;
+            page-break-after: always;
+        }
+
+        .page img {
+            width: 100%;
+            height: auto;
+        }
+        }
+    </style>
+</head>
+<body style="background-color: #d2f0c6;">
+    <header>
+        <div class="header">
+            <a href="#"><img src="./image/Odu.png" alt="" width="300" height="100"></a> 
+        </div>
+        <!-- Menu -->
+        <div class="navbar">
+            <a href="./Odu.html">Trang chủ</a>
+            <a href="#kienthuc">Kiến thức ôn thi THPT</a>
+            <a href="#baitap">Bài tập</a>
+            <a href="./Thithu.html">Đề thi thử</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Microsoft Excel 365</h3>
+            <ul>
+                <li><a href="./Lythuyet.html">Chủ đề 12A.Giới thiệu trí tuệ nhân tạo</a></li>
+                <li><a href="./LT1.html">Chủ đề 12B.Kết nối mạng</a></li>
+                <li><a href="./LT2.html">Chủ đề 12F.Tạo trang web</a></li>
+                <li><a href="./LT3.html">Chủ đề 12D.Giữ gìn tính nhân văn trong thế giới ảo</a></li>
+                <li><a href="./LT4.html">Chủ đề 12G.Giới thiệu nhóm nghề dịch vụ và quản trị</a></li>
+                <li><a href="./LT5.html">Chủ đề 12F.Giới thiệu các hệ cơ sở dữ liệu</a></li>
+                <li><a href="./LT6.html">Chủ đề 12F<sup>CS</sup>.Giới thiệu học máy và khoa học dữ liệu</a></li>
+                <li><a href="./LT7.html">Chủ đề 11F<sup>CS</sup>.Kĩ thuật lập trình</a></li>
+                <li><a href="./LT8.html">Chủ đề 12E<sup>ICT</sup>.Thực hành phần mềm tạo trang web</a></li>
+                <li><a href="./LT9.html">Chủ đề 11E<sup>ICT</sup>.Thực hành tạo và khai thác cơ sở dữ liệu</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <div class="page">
+                <img src="./img Kienthuc/Cd1.jpg" alt="Trang 1">
+            </div>
+
+            <div class="page">
+                <img src="./img Kienthuc/Cd1(1).jpg" alt="Trang 2">
+            </div>
+
+            <div class="page">
+                <img src="./img Kienthuc/Cd1(2).jpg" alt="Trang 3">
+            </div>
+
+            <div class="page">
+                <img src="./img Kienthuc/Cd1(3).jpg" alt="Trang 4">
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>
+
+

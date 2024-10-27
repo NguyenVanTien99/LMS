@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học tốt cùng Odu</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: #f3ffec;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 120px;
+            padding: 0 20px;
+            background: #c7d9a0;
+        }
+
+        .login a {
+            font-size: 18px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .login a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar {
+            display: flex;
+            background-color: #73bc63;
+            width: 100%;
+        }
+
+        .navbar a {
+            flex: 1;
+            font-size: 18px;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+        .navbar a:hover{
+            background-color: rgb(86, 160, 46);
+        }
+        main {
+            background: #f3ffec;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;           
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content h2 {
+            color: #e74c3c;
+        }
+
+        .modal-content p {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        .modal-content button {
+            background-color: #62d466;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .modal-content button:hover {
+            background-color: #3c9240;
+        }
+
+        #result-text {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .question-title {
+            font-size: 28px;
+        }
+
+        .question-text {
+            font-size: 24px;
+        }
+
+        label {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        #fixed-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #timer-footer {
+            font-size: 20px;
+        }
+        .answer-button {
+        display: inline-block;
+        background-color: #5cc05f; /* Màu nền xanh */
+        color: white; /* Màu chữ trắng */
+        border: none; /* Không có viền */
+        border-radius: 5px; /* Góc tròn */
+        padding: 10px 15px; /* Khoảng đệm */
+        margin: 5px 0; /* Khoảng cách */
+        cursor: pointer; /* Con trỏ dạng tay khi di chuột */
+        transition: background-color 0.3s ease; /* Hiệu ứng chuyển tiếp mượt mà */
+        font-size: 18px; /* Kích thước chữ */
+        }
+
+        .answer-button input {
+            display: none; /* Ẩn nút radio */
+        }
+
+        /* Thay đổi màu nền khi di chuột */
+        .answer-button:hover {
+            background-color: #48874b; /* Màu xanh đậm hơn khi di chuột */
+        }
+
+        /* Thay đổi màu nền khi được chọn */
+        .answer-button input:checked + .answer-button {
+            background-color: #1e7423; /* Màu xanh đậm hơn khi được chọn */
+        }
+        #result-modal {
+        display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="#"><img src="./image/Odu.png" alt="Logo" width="300" height="100"></a>
+            <div class="login">
+                <a href="./LogIn.html">Đăng nhập</a>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <a href="./Odu.html">Trang chủ</a>
+            <a href="./Lythuyet.html">Kiến thức ôn thi THPT</a>
+            <a href="#baitap">Bài tập</a>
+            <a href="./Thithu.html">Đề thi thử</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="quiz-form"></form>
+        <div style="height: 150px;"></div>
+        <div id="fixed-footer">
+            <button type="button" onclick="submitQuiz()">Nộp Bài</button>
+        </div>
+    
+        <!-- Modal Kết quả -->
+        <div id="result-modal" class="modal">
+            <div class="modal-content">
+                <h2>Kết Quả Điểm Thi</h2>
+                <p id="result-text"></p>
+                <button id="home-button" onclick="closeModal()">Quay Về Trang Chủ</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./Chude1.js"></script>
+</body>
+</html>

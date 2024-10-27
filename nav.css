@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif; /* Phông chữ mặc định */
+}
+
+body {
+    font-family: Verdana, sans-serif; /* Phông chữ cho body */
+    background-image: linear-gradient(rgb(212, 244, 192), rgb(231, 249, 222)); /* Hình nền gradient */
+}
+
+.header {
+    display: flex; /* Sử dụng flexbox */
+    justify-content: space-between; /* Căn giữa các phần tử */
+    align-items: center; /* Căn chỉnh theo chiều dọc */
+    height: 120px; /* Chiều cao header */
+    padding: 0 20px; /* Padding bên trái và bên phải */
+    background: #c7d9a0; /* Màu nền header */
+}
+
+.login {
+    margin-left: 20px; /* Khoảng cách bên trái cho phần đăng nhập */
+}
+
+.login a {
+    font-size: 18px; /* Kích thước font cho link */
+    color: #333; /* Màu chữ */
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+.login a:hover {
+    text-decoration: underline; /* Gạch chân khi hover */
+}
+
+.container {
+    max-width: 1555px; /* Chiều rộng tối đa */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    margin: 0 auto; /* Căn giữa khung chứa */
+}
+
+header img { /* Sửa lại selector cho hình ảnh trong header */
+    padding-left: 0; /* Padding bên trái cho hình ảnh */
+}
+
+.text-center {
+    text-align: center; /* Căn giữa văn bản */
+    margin: 20px auto; /* Khoảng cách bên ngoài */
+    max-width: 800px; /* Giới hạn chiều rộng */
+}
+
+.tip {
+    display: flex; /* Sử dụng flexbox để căn chỉnh */
+    align-items: flex-start; /* Căn chỉnh phần tử theo chiều dọc */
+    margin: 10px 0; /* Khoảng cách giữa các tip */
+    justify-content: center; /* Căn giữa nội dung */
+}
+
+.float-left {
+    margin-right: 15px; /* Khoảng cách giữa ảnh và văn bản bên phải */
+}
+
+.float-right {
+    margin-left: 15px; /* Khoảng cách giữa ảnh và văn bản bên trái */
+}
+
+.tip-content {
+    max-width: 70%; /* Giới hạn chiều rộng của nội dung văn bản */
+    text-align: left; /* Đặt văn bản căn trái */
+}
+
+.mySlides {
+    display: none; /* Ẩn các slide */
+}
+
+img {
+    vertical-align: middle; /* Căn giữa ảnh theo chiều dọc */
+}
+
+/* Khung chứa slideshow */
+.slideshow-container {
+    max-width: 1000px; /* Chiều rộng tối đa */
+    position: relative; /* Vị trí tương đối */
+    margin: auto; /* Căn giữa khung chứa */
+}
+
+/* Văn bản chú thích */
+.text {
+    color: #f2f2f2; /* Màu chữ chú thích */
+    font-size: 15px; /* Kích thước font */
+    padding: 8px 12px; /* Padding cho văn bản chú thích */
+    position: absolute; /* Vị trí tuyệt đối */
+    bottom: 8px; /* Căn dưới khung chứa */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    text-align: center; /* Căn giữa văn bản */
+}
+
+/* Văn bản số (1/3, v.v.) */
+.numbertext {
+    color: #f2f2f2; /* Màu chữ cho số */
+    font-size: 12px; /* Kích thước font cho số */
+    padding: 8px 12px; /* Padding cho số */
+    position: absolute; /* Vị trí tuyệt đối */
+    top: 0; /* Căn trên khung chứa */
+}
+
+/* Các dấu chấm/bullets/indicators */
+.dot {
+    height: 15px; /* Chiều cao dấu chấm */
+    width: 15px; /* Chiều rộng dấu chấm */
+    margin: 0 2px; /* Khoảng cách giữa các dấu chấm */
+    background-color: #fffefe; /* Màu nền dấu chấm */
+    border-radius: 50%; /* Đường viền tròn */
+    display: inline-block; /* Hiển thị inline */
+    transition: background-color 0.1s ease; /* Hiệu ứng chuyển màu */
+}
+
+.active {
+    background-color: #717171; /* Màu nền cho dấu chấm đang hoạt động */
+}
+
+/* Hiệu ứng mờ */
+.fade {
+    animation-name: fade; /* Tên hoạt ảnh */
+    animation-duration: 2.5s; /* Thời gian hoạt ảnh */
+}
+
+@keyframes fade {
+    from { opacity: 0.4; } /* Bắt đầu mờ */
+    to { opacity: 1; } /* Kết thúc không mờ */
+}
+
+/* Trên màn hình nhỏ, giảm kích thước văn bản */
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px; /* Kích thước font cho màn hình nhỏ */
+    }
+}
+
+/* Menu */
+.navbar {
+    display: flex; /* Sử dụng flexbox cho menu */
+    background-color: #73bc63; /* Màu nền menu */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+}
+
+.navbar a {
+    flex: 1; /* Mỗi mục menu sẽ chiếm đều không gian */
+    font-size: 18px; /* Kích thước font cho mục menu */
+    color: white; /* Màu chữ cho mục menu */
+    text-align: center; /* Căn giữa cho mục menu */
+    padding: 14px; /* Padding cho các mục menu */
+    text-decoration: none; /* Bỏ gạch chân cho link */
+}
+.navbar a:hover{
+    background-color: rgb(86, 160, 46); /* Hiệu ứng hover */
+}

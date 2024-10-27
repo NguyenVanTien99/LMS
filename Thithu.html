@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học tốt cùng Odu</title>
+    <style>
+            * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: #e3f5d7;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 120px;
+            padding: 0 20px; 
+            background: #c7d9a0;
+        }
+        header img {
+            width: 300px; /* Chiều rộng cố định 300px */
+            height: 100px; /* Chiều cao cố định 100px */
+            max-width: 100%; /* Đảm bảo hình ảnh không vượt quá 100% chiều rộng của phần tử chứa */
+        }
+        /* Menu */
+        .navbar {
+            display: flex; 
+            background-color: #73bc63;
+            width: 100%; 
+        }
+
+        .navbar a {
+            flex: 1; 
+            font-size: 18px;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: rgb(86, 160, 46); 
+        }
+        /* Bố cục dạng danh sách */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Căn giữa theo chiều ngang */
+            gap: 20px;
+            padding: 20px;
+            max-width: 90%; /* Giới hạn chiều rộng của container là 90% màn hình */
+            margin: 0 auto; /* Căn giữa container */
+        }
+
+        .box {
+            background-color: white;
+            padding: 10px 20px; /* Giảm padding để chiều cao nhỏ hơn */
+            border-radius: 5px;
+            width: 100%; /* Chiều rộng đầy đủ trong container */
+            max-width: 1000px; /* Chiều rộng tối đa lớn hơn, dài hơn */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Căn văn bản về bên trái */
+        }
+
+        /* Tiêu đề và nội dung trong box */
+        .box h3 {
+            color: #f48942;
+            margin-bottom: 5px; /* Giảm khoảng cách để chiều cao nhỏ hơn */
+            font-size: 1.1em;
+        }
+
+        .box p {
+            color: #666;
+            font-size: 1em;
+        }
+        .box:hover {
+        background-color: #d1eaca; 
+        cursor: pointer; 
+        }
+        a {
+        text-decoration: none; 
+        color: inherit; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="#"><img src="./image/Odu.png" alt="Logo"></a>
+        </div>
+
+        <!-- Menu -->
+        <nav class="navbar">
+            <a href="./Odu.html">Trang chủ</a>
+            <a href="./Lythuyet.html">Kiến thức ôn thi THPT</a>
+            <a href="#baitap">Bài tập</a>
+            <a href="./Thithu.html">Đề thi thử</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="box">
+            <a href="./Chude1.html">
+            <h3>Giới thiệu Trí tuệ nhân tạo</h3>
+            </a>
+            <p>15 Câu Trắc Nghiệm - 6 Câu hỏi Đúng/Sai</p>
+        </div>
+        <div class="box">
+            <h3>Mạng máy tính và Internet</h3>
+            <p>20 Câu Trắc Nghiệm - 7 Câu hỏi Đúng/Sai</p>
+        </div>
+        <div class="box">
+            <h3>Đạo đức, pháp luật và văn hoá trong môi trường số</h3>
+            <p>16 Câu Trắc Nghiệm - 2 Câu hỏi Đúng/Sai</p>
+        </div>
+        <div class="box">
+            <h3>Giới thiệu các hệ Cơ sở dữ liệu</h3>
+            <p>30 Câu Trắc Nghiệm - 6 Câu hỏi Đúng/Sai</p>
+        </div>
+        <div class="box">
+            <h3>Tạo trang web với HTML và CSS</h3>
+            <p>40 Câu Trắc Nghiệm - 12 Câu hỏi Đúng/Sai</p>
+        </div>
+        <div class="box">
+            <h3>Hướng nghiệp với tin học</h3>
+            <p>25 Câu Trắc Nghiệm - 4 Câu hỏi Đúng/Sai</p>
+        </div>
+        <div class="box">
+            <h3>Kĩ thuật lập trình</h3>
+            <p>20 Câu Trắc Nghiệm - 4 Câu hỏi Đúng/Sai</p>
+        </div>
+        <div class="box">
+            <h3>Học máy và Khoa học dữ liệu</h3>
+            <p>24 Câu Trắc Nghiệm - 5 Câu hỏi Đúng/Sai</p>
+        </div>
+        <div class="box">
+            <h3>Thực hành tạo và khai thác Cơ sở dữ liệu</h3>
+            <p>22 Câu Trắc Nghiệm - 5 Câu hỏi Đúng/Sai</p>
+        </div>
+        <div class="box">
+            <h3>Sử dụng phần mềm tạo trang web</h3>
+            <p>24 Câu Trắc Nghiệm - 6 Câu hỏi Đúng/Sai</p>
+        </div>
+    </main>
+</body>
+</html>
